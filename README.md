@@ -1,2 +1,0 @@
-# Plague-Inc
-Plague Inc
