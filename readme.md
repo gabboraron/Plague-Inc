@@ -1,4 +1,4 @@
-<center>![headline](readme_design/headline.png)</center>
+![headline](readme_design/headline.png)
 
 # Plague Inc
 **Developers: [Sándor Burián](https://www.linkedin.com/in/sandor-burian), [Vince Molnár](https://www.linkedin.com/in/vince-moln%C3%A1r-4632191a3?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAC-NWEsB0R33ReLNEcYmNQIguMi0-lBYPhw&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_people%3B%2FVwg4S7gQQmd5Xw43x852g%3D%3D), [Dávid Kamenár](https://hu.linkedin.com/in/david-kamenar-1178b312a?trk=people-guest_people_search-card)**
@@ -21,19 +21,17 @@ hackathon link: [CraftHub - Junction app](http://web.archive.org/web/20220424114
 - researched for methods which are used to compare epidemics like this situation 
 - created the simulation
 
-Let's see a possible usage of this program, please watch this short video about a possible use case: 
+Let's see a possible usage of this program, please watch this short video on YouTube about a possible use case: 
 
 [![A Lassa-fever story](readme_design/lassa_story.png)](https://www.youtube.com/watch?v=KxBMI9pYklE)
-
 
 ----
 
 ## Methodology
 For this we are using incidence, based on the time period of the disaster and number of ill people of the specified epidemic. This we can write as the following equation:
 
-<center>
+
 ![\frac{New Cases During Period Of Disaster}{\sum_1^{time}{(EachPersonObserved)}}](https://latex.codecogs.com/gif.latex?\frac{New%20Cases%20During%20Period%20Of%20Disaster}{\sum_1^{time}{(EachPersonObserved)}})
-</center>
 
 *Of course we have to mention that may occur confounding in these simulations because we didn't observe each case, only the simulation based on the actual cases. Also, we have to mention that there will be so many other factors what we didn't take in our model, such as weather or economical situations of each region.*
 
