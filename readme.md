@@ -51,3 +51,4 @@ The source of data was the following list:
 - Zika-vírus. (2020). In Wikipédia. https://hu.wikipedia.org/w/index.php?title=Zika-v%C3%ADrus&oldid=22828317
 
 
+See a more detailed description in [hungarian documentation](https://github.com/buriansandor/Plague-Inc/blob/main/dokumentacio.pdf).
