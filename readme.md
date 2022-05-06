@@ -21,7 +21,7 @@ hackathon link: [CraftHub - Junction app](http://web.archive.org/web/20220424114
 - researched for methods which are used to compare epidemics like this situation 
 - created the simulation
 
-Let's see a possible usage of this program, please watch this short video on YouTube about a possible use case: 
+Let's see a possible usage of this program, please watch this short video on YouTube about a possible use case *(2 min)*: 
 
 [![A Lassa-fever story](readme_design/lassa_story.png)](https://www.youtube.com/watch?v=KxBMI9pYklE)
 
@@ -51,3 +51,4 @@ The source of data was the following list:
 - Zika-vírus. (2020). In Wikipédia. https://hu.wikipedia.org/w/index.php?title=Zika-v%C3%ADrus&oldid=22828317
 
 
+See a more detailed description in [hungarian documentation](https://github.com/buriansandor/Plague-Inc/blob/main/dokumentacio.pdf).

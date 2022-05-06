@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Datavis Index</title>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+	<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+	<script type="text/javascript" src="chartjs-plugin-datasource.js"></script>
+
+	<link rel="stylesheet" href="Foundation-Sites-CSS/css/foundation.css">
+  <link rel="stylesheet" href="Foundation-Sites-CSS/css/app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <script type="text/javascript">
+    /*google.charts.load('current', {
+      'packages':['geochart'],
+    });
+    google.charts.setOnLoadCallback(drawRegionsMap);
+    var data = google.visualization.arrayToDataTable([['Country', 'Popularity']]);
+    
+    function drawRegionsMap() {
+     var data = google.visualization.arrayToDataTable([ ['Country', 'Chance of impact of event']]);
+     var data = google.visualization.arrayToDataTable([
+        ['Country', 'Popularity'],
+        ['Germany', 0],
+        ['United States', 0],
+        ['Brazil', 0],
+        ['Canada', 0],
+        ['France', 0],
+        ['Russia', 0]
+        ]);
+
+      var options = {
+        backgroundColor: '#000f1a',
+        colorAxis: {colors: ['yellow', 'orange', '#e31b23']},
+        atalessRegionColor: '#2a2a28',
+        defaultColor: '#2a2a28',
+      };
+
+      var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+      chart.draw(data, options);
+    }
+  </script>
+
+</head>
+<body style="background-color: #000f1a;">
+
+  <div class="off-canvas-wrapper">
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+      <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+        <!-- left off-canvas markup -->
+        <center>
+          <img src="readme_design/headline.png" alt="Plague Inc - predicting possible epidemics based on natural disasters and wars">
+          
+          <br>
+          Search for country or year, and see how the latest event affected the world.
+        </center>
+        <hr>
+
+        <form data-abide novalidate>
+          <div class="grid-x grid-margin-x">
+            <div class="cell">
+              <div data-abide-error class="alert callout" style="display: none;">
+                <p><i class="fi-alert"></i> There are some errors in your form.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="grid-x grid-padding-x">
+          <div class="large-6 medium-6 cell">
+            <label>Choose the type of infection:
+              <select id="infection" required>
+                <option value="Zika"> Zika </option>
+                <!--<option value="Ebola">Ebola</option>-->
+              </select>
+            </label>
+          </div>
+          <div class="large-6 medium-6 cell">
+            <label>Filter for start event by:
+              <select id="filter" required>
+                <option value="Country">Country </option>
+                <option value="Disaster Group">Disaster Group</option>
+                <option value="Region">Region</option>
+                <option value="Start Year">Start Year</option>
+                <option value="End Year">End Year</option>
+              </select>
+            </label>
+          </div>
+        </div>
+          <div>
+            <label>Search for start event based on filter:
+              <div class="grid-x grid-margin-x">
+                <input id="searchvalue" type="text" placeholder="Hungary" aria-describedby="search for a disaster based on filter" required class="large-11"> 
+                <a href="#" class="button" id="search"><i class="fa fa-search" aria-hidden="true" class="large-2"></i></a><br/>
+              </div>
+            </label>
+          </div>
+        </form>
+
+        <hr>
+        <p style="padding-top: 30%;">
+          <center>
+            <a href="https://youtu.be/KxBMI9pYklE"><img src="readme_design/youtube.png" alt="Github repo link" style="max-height: 32px;"></a>
+            <a href=""><img src="readme_design/GitHub-Mark/GitHub-Mark/PNG/GitHub-Mark-Light-32px.png" alt="Github repo link"></a>
+          </center>
+        </p>
+      </div>
+      <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
+        <!-- right off-canvas markup -->
+      </div>
+      <div class="off-canvas-content" data-off-canvas-content>
+
+        <div class="grid-x grid-padding-x" style="">
+          <div class="large-12 cell body">
+            <button type="button" class="button" data-toggle="offCanvasLeft">Open Menu</button>
+            <div id="regions_div" style="width: auto; height: 94vh;">   
+              <center>
+                <img src="readme_design/headline.png" alt="Plague Inc - predicting possible epidemics based on natural disasters and wars">
+              </center>
+            </div>
+          </div>
+
+          <div class="large-12 cell thisfooter">
+            <center>
+              <b>Created with <i class="fa fa-heart" style="color:red"></i> by <a href="https://www.linkedin.com/in/sandor-burian">Sándor Burián</a>, <a href="https://www.linkedin.com/in/vince-moln%C3%A1r-4632191a3?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAC-NWEsB0R33ReLNEcYmNQIguMi0-lBYPhw&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_people%3B%2FVwg4S7gQQmd5Xw43x852g%3D%3D">Vince Molnár</a>, <a href="https://hu.linkedin.com/in/david-kamenar-1178b312a?trk=people-guest_people_search-card">Dávid Kamenár</a> @ <a href="https://hacknheal.crafthub.events/">HackHeal Hackathon 2022</a> on <a href="https://uni-obuda.hu/main-page/">Óbuda University</a> in <a href="https://en.wikipedia.org/wiki/2022">2022</a></b>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<!--<canvas id="myChart"></canvas>
+    <script src="disastervis.js"></script>-->
+
+    <script src="Foundation-Sites-CSS/js/vendor/jquery.js"></script>
+    <script src="Foundation-Sites-CSS/js/vendor/what-input.js"></script>
+    <script src="Foundation-Sites-CSS/js/vendor/foundation.js"></script>
+    <script src="Foundation-Sites-CSS/js/app.js"></script>
+    
+    <script src="js/eboladata.js"></script>
+    <script src="js/zikadata.js"></script>
+    <script src="js/disasterdata.js"></script>
+    <script src="js/disasters_search.js"></script>
+  </body>
+  </html>
+

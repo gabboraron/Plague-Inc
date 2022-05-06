@@ -1,0 +1,54 @@
+.thisfooter{
+	background-color: black;
+	color: white;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.thisfooter a, a:after, a:visited{
+	background-color: black;
+	color: white;
+}
+
+.thisfooter a:hover{
+	background-color: black;
+	color: white;
+	text-shadow: 2px 2px 8px white;
+}
+
+.position-left{
+	color: orange;
+	background-color: #242929;
+}
+
+label{
+	color: orange;
+}
+
+select{
+	background-color: black;
+	color: orange;
+}
+
+select:focus{
+	background-color: black;
+	color: orange;
+}
+
+option{
+	background-color: black;
+	color: orange;
+}
+
+input{
+	background-color: black;
+	color: orange;
+}
+
+.position-left{
+	width: 50%;
+}
+
+.position-left img{
+	max-width: 50%;
+}
